@@ -1,7 +1,11 @@
 {
-  "name": "zen-subtheme",
-  "author": "You!",
-  "description": "The node.js requirements to build this project.",
+  "name": "mirage",
+  "author": {
+    "name": "Patrick Judge",
+    "email": "pjudge@bettergov.org",
+    "url": "https://github.com/bettergov"
+  },
+  "description": "Zen subtheme for bettergov.org.",
   "version": "1.0.0",
   "repository": {},
   "devDependencies": {
