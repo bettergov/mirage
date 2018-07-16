@@ -16,7 +16,7 @@ var options = {};
 // accordingly.
 options.rootPath = {
   project: __dirname + '/',
-  styleGuide: __dirname + '/styleguide/',
+  styleGuide: __dirname + '/docs/',
   theme: __dirname + '/'
 };
 
