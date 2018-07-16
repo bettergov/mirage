@@ -1,7 +1,7 @@
 'use strict';
 
-var importOnce = require('node-sass-import-once'),
-  path = require('path');
+const importOnce = require('node-sass-import-once');
+const path = require('path');
 
 var options = {};
 
@@ -93,13 +93,13 @@ options.gulpWatchOptions = {};
 // ################################
 // Load Gulp and tools we will use.
 // ################################
-var gulp = require('gulp'),
-  $ = require('gulp-load-plugins')(),
-  browserSync = require('browser-sync').create(),
-  del = require('del'),
-  // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
-  sass = require('gulp-sass'),
-  kss = require('kss');
+const gulp = require('gulp');
+const $ = require('gulp-load-plugins')();
+const browserSync = require('browser-sync').create();
+const del = require('del');
+// gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
+const sass = require('gulp-sass');
+const kss = require('kss');
 
 // The default task.
 gulp.task('default', ['build']);

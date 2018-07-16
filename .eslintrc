@@ -1,7 +1,9 @@
 {
   "extends": "eslint:recommended",
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "node": true
   },
   "globals": {
     "Drupal": true,
@@ -11,7 +13,7 @@
     // Errors.
     "array-bracket-spacing": [2, "never"],
     "block-scoped-var": 2,
-    "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
     "comma-dangle": [2, "never"],
     "comma-spacing": 2,
     "comma-style": [2, "last"],
@@ -20,11 +22,14 @@
     "eol-last": 2,
     "eqeqeq": [2, "smart"],
     "guard-for-in": 2,
-    "indent": [2, 2, {"SwitchCase": 1}],
-    "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
-    "keyword-spacing": [2, {"before": true, "after": true}],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": [2, { "before": true, "after": true }],
     "linebreak-style": [2, "unix"],
-    "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false}],
+    "lines-around-comment": [
+      2,
+      { "beforeBlockComment": true, "afterBlockComment": false }
+    ],
     "new-parens": 2,
     "no-array-constructor": 2,
     "no-caller": 2,
@@ -58,16 +63,16 @@
     "no-undef-init": 2,
     "no-undefined": 2,
     "no-unused-expressions": 2,
-    "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+    "no-unused-vars": [2, { "vars": "all", "args": "none" }],
     "no-with": 2,
-    "object-curly-spacing": [2, "never"],
+    "object-curly-spacing": [2, "always"],
     "one-var": [2, "never"],
     "quote-props": [2, "consistent-as-needed"],
     "quotes": [2, "single", "avoid-escape"],
     "semi": [2, "always"],
-    "semi-spacing": [2, {"before": false, "after": true}],
+    "semi-spacing": [2, { "before": false, "after": true }],
     "space-before-blocks": [2, "always"],
-    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "space-before-function-paren": [2, "never"],
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
     "space-unary-ops": [2, { "words": true, "nonwords": false }],
@@ -76,12 +81,15 @@
     "yoda": [2, "never"],
     // Warnings.
     "max-nested-callbacks": [1, 3],
-    "valid-jsdoc": [1, {
-      "prefer": {
-        "returns": "return",
-        "property": "prop"
-      },
-      "requireReturn": false
-    }]
+    "valid-jsdoc": [
+      1,
+      {
+        "prefer": {
+          "returns": "return",
+          "property": "prop"
+        },
+        "requireReturn": false
+      }
+    ]
   }
 }
