@@ -26,7 +26,35 @@
 blockquote {
   // Set 1 unit of vertical rhythm on the top and bottom margin.
   // Also indent the quote on both sides.
-  @include margin(1 $indent-amount);
+  @include margin(1 0);
+  @include type-layout(s, .75);
+  @include typeface(sans);
+
+  background: color(body-bg);
+  border: none;
+  color: color(text-grey);
+  padding: $indent-amount $indent-amount $indent-amount (2 * $indent-amount);
+  position: relative;
+
+  &:before {
+    color: color('grey');
+    content: '“';
+    font-size: 55px;
+    font-style: normal;
+    left: 0.4em;
+    line-height: 22px;
+    position: absolute;
+    text-align: center;
+    top: 0.6em;
+  }
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 // Lists
@@ -71,6 +99,10 @@ ul {
   @include margin(1 0);
 }
 
+li {
+  @include margin(.5 0);
+}
+
 // Turn off margins on nested lists.
 ol,
 ul {
@@ -81,14 +113,15 @@ ul {
 }
 
 dt {
-  // Add your styles.
+  @include margin(.5 0);
 }
 
 dd {
-  margin: 0 0 0 $indent-amount;
+  @include margin(.5 0);
+  margin-left: $indent-amount;
 
   @include rtl {
-    margin: 0 $indent-amount 0 0;
+    margin-right: $indent-amount;
   }
 }
 
@@ -127,10 +160,22 @@ ul {
 figure {
   // Add the correct margin in IE 8.
   @include margin(1 0);
+  @include typeface(sans);
+
+  font-style: italic;
 }
 
 figcaption {
-  // Add your styles.
+  @include margin(.5 0);
+  @include type-layout(s, 1);
+  @include typeface(sans);
+
+  color: color(text-grey);
+  font-style: normal;
+}
+
+figcaption > br {
+  @include margin(.25 0);
 }
 
 // Horizontal rule

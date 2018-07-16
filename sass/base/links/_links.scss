@@ -18,6 +18,7 @@
 a,
 %link {
   color: color(link);
+  text-decoration: none;
   // Remove gaps in links underline in iOS 8+ and Safari 8+.
   -webkit-text-decoration-skip: objects;
 }
@@ -32,6 +33,7 @@ a,
 a:hover,
 a:focus {
   // Add your styles.
+  text-decoration: underline;
 }
 
 a:active {

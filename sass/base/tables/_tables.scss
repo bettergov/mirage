@@ -11,6 +11,8 @@
 table {
   // Add vertical rhythm margins.
   @include margin(1 0);
+  @include type-layout(s, 1);
+  @include typeface(sans);
   // Remove most spacing between table cells.
   border-collapse: collapse;
   border-spacing: 0;
@@ -18,8 +20,41 @@ table {
   width: 100%;
 }
 
-td,
+caption {
+  @include margin(.5);
+
+  color: color(text-grey);
+}
+
+thead {
+  border-bottom: 1px solid color(border);
+}
+
+tfoot {
+  border-top: 1px solid color(border);
+}
+
+tbody > tr {
+  &:nth-child(2n+1) {
+    background: color(body-bg);
+  }
+}
+
+td {
+  @include padding(.5);
+  vertical-align: top;
+}
+
 th {
-  // Remove most spacing between table cells.
-  padding: 0;
+  @include padding(.5);
+  font-weight: bold;
+  text-align: left;
+}
+
+thead > th {
+  vertical-align: bottom;
+}
+
+tfoot > th {
+  vertical-align: top;
 }

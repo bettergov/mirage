@@ -15,14 +15,18 @@
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
 
 $chroma: add-colors((
+  bga-blue:               #003a63,
+  bga-yellow:             #fff200,
+
   black:                  #000,
+  text-black:             ('black' lighten 20%), // #333
   grey-dark:              ('black' lighten 40%), // #666
   'grey':                 ('black' lighten 60%), // #999
   grey-light:             ('black' lighten 80%), // #ccc
-  grey-extra-light:       ('black' lighten 93.33%), // #eee
+  grey-extra-light:       ('black' lighten 95%), // #f2f2f2
   white:                  #fff,
 
-  blue:                   #0072b9,
+  blue:                   #4580bb,
   red:                    #c00,
   yellow:                 #fd0,
 ));
@@ -31,8 +35,9 @@ $chroma: add-colors((
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   'black',
+  text:                   'text-black',
   text-bg:                'white',
+  text-grey:              'grey-dark',
 
   link:                   'blue',
   link-visited:           ('blue' darken 20%),
@@ -45,7 +50,7 @@ $chroma: add-colors('functional', (
   autocomplete-select:    'white',
   autocomplete-select-bg: 'blue',
 
-  body-bg:                'text-bg',
+  body-bg:                'grey-extra-light',
 
   button:                 'text',
   button-disabled:        'grey',
@@ -54,7 +59,7 @@ $chroma: add-colors('functional', (
   form-error:             'red',
 
   mark-highlight:         'red',
-  mark-bg:                'yellow',
+  mark-bg:                'bga-yellow',
 
   menu-active:            'text',
 

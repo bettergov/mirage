@@ -15,9 +15,11 @@
 //
 // Style guide: base.text.abbr
 
-abbr[title] {
+abbr[title],
+acronym[title] {
   // Remove the bottom border in Firefox <40.
   border-bottom: 0;
+  cursor: help;
   // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;

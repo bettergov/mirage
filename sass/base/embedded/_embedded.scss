@@ -44,3 +44,48 @@ svg:not(:root) {
   // Hide the overflow in IE.
   overflow: hidden;
 }
+
+// Audio
+//
+// The HTML5 `<audio>` element specifies a standard way to embed audio in a web page.
+//
+// Markup: embedded-audio.twig
+//
+// Weight: 2
+//
+// Style guide: base.embedded.audio
+
+audio {
+  @include margin(1 0);
+}
+
+// iFrame
+//
+// The `<iframe>` element specifies a standard way to embed content from an external web page.
+//
+// Markup: embedded-iframe.twig
+//
+// Weight: 2
+//
+// Style guide: base.embedded.iframe
+
+iframe {
+  @include margin(1 0);
+}
+
+// Video
+//
+// The HTML5 `<video>` element specifies a standard way to embed video in a web page.
+//
+// Markup: embedded-video.twig
+//
+// Weight: 2
+//
+// Style guide: base.embedded.video
+
+video {
+  @include margin(1 0);
+  width: 100%;
+  height: auto;
+}
+
