@@ -31,21 +31,21 @@ blockquote {
   @include typeface(sans);
 
   background: color(body-bg);
-  border: none;
+  border: 0;
   color: color(text-grey);
   padding: $indent-amount $indent-amount $indent-amount (2 * $indent-amount);
   position: relative;
 
-  &:before {
+  &::before {
     color: color('grey');
     content: '“';
     font-size: 55px;
     font-style: normal;
-    left: 0.4em;
+    left: .4em;
     line-height: 22px;
     position: absolute;
     text-align: center;
-    top: 0.6em;
+    top: .6em;
   }
 }
 

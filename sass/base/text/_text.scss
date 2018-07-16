@@ -26,7 +26,7 @@ acronym[title] {
 
   @media print {
     // Add visible title after abbreviations.
-    &:after {
+    &::after {
       content: ' (' attr(title) ')';
     }
   }
@@ -70,7 +70,7 @@ b {
 // Style guide: base.text.cite
 
 cite {
-  // Add your styles.
+  font-style: italic;
 }
 
 // Code
@@ -105,7 +105,7 @@ var {
 // Style guide: base.text.del
 
 del {
-  // Add your styles.
+  text-decoration: line-through;
 }
 
 // Definition
@@ -137,7 +137,7 @@ dfn {
 
 i,
 em {
-  // Add your styles.
+  font-style: italic;
 }
 
 // Inserted text
@@ -149,7 +149,8 @@ em {
 // Style guide: base.text.ins
 
 ins {
-  // Add your styles.
+  text-decoration: underline;
+  color: color(red);
 }
 
 // Marked text
@@ -177,7 +178,8 @@ mark {
 // Style guide: base.text.q
 
 q {
-  // Add your styles.
+  &::before { content: open-quote; }
+  &::after { content: open-quote; }
 }
 
 // Strikethrough text
@@ -189,7 +191,7 @@ q {
 // Style guide: base.text.s
 
 s {
-  // Add your styles.
+  text-decoration: line-through;
 }
 
 // Small text
@@ -243,5 +245,5 @@ sup {
 // Style guide: base.text.u
 
 u {
-  // Add your styles.
+  text-decoration: underline;
 }

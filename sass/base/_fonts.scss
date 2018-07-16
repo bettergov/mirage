@@ -32,4 +32,5 @@
 //   font-style: normal;
 // }
 
-@import url("https://use.typekit.net/mqd7hhp.css");
+// sass-lint:disable no-url-domains, no-url-protocols
+@import url('//use.typekit.net/mqd7hhp.css');
