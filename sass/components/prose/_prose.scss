@@ -1,0 +1,16 @@
+// Prose
+//
+// Within articles, etc., we want the main text to be styled with serif font. By
+// applying `.prose` to the wrapping container, all paragraphs will be styled
+// with serif font.
+//
+// Markup: prose.twig
+//
+// Style guide: components.prose
+
+.prose,
+%prose {
+  p {
+    @include typeface(serif);
+  }
+}

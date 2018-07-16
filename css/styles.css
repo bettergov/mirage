@@ -1169,6 +1169,10 @@ span.field-label + * > :first-child > :first-child {
   }
 }
 
+.prose p {
+  font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+}
+
 .responsive-video,
 .media-youtube-video,
 .media-vimeo-preview-wrapper {
