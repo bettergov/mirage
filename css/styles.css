@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333333;
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 article,
@@ -278,7 +278,7 @@ blockquote {
   font-size: 0.875rem;
   line-height: 1.21875rem;
   font-family: "Acumin Pro", Helvetica, Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f7f7f7;
   border: 0;
   color: #666666;
   padding: 32px 32px 32px 64px;
@@ -594,7 +594,7 @@ tfoot {
 }
 
 tbody > tr:nth-child(2n+1) {
-  background: #f2f2f2;
+  background: #f7f7f7;
 }
 
 td {
@@ -1230,7 +1230,7 @@ span.field-label + * > :first-child > :first-child {
   height: 0;
   overflow: visible;
   background-color: transparent;
-  color: #f2f2f2;
+  color: #f7f7f7;
   font-size: 75px;
   line-height: 1;
   text-align: center;
@@ -1676,7 +1676,7 @@ label.option {
   position: fixed;
   visibility: hidden;
   margin-top: 0;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
 }
 
 .form-table__sticky-header.is-sticky, .form-table__sticky-header--is-sticky,
@@ -1710,20 +1710,20 @@ form table tbody {
 form table tbody tr {
   padding: .1em .6em;
   border-bottom: 1px solid #cccccc;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
 }
 
 .form-table__row:nth-child(even),
 .form-table tbody tr:nth-child(even),
 form table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
 }
 
 .form-table__row.is-active, .form-table__row--is-active,
 .form-table tbody tr.is-active,
 form table tbody tr.is-active,
 td.active {
-  background-color: #e1e1e1;
+  background-color: #e6e6e6;
 }
 
 .form-table__row.is-disabled, .form-table__row--is-disabled,
@@ -1835,7 +1835,7 @@ tr .ajax-progress .throbber {
 
 .resizable-textarea__grippie,
 .resizable-textarea .grippie {
-  background: url(../sass/forms/resizable-textarea/grippie.png) no-repeat center 2px #f2f2f2;
+  background: url(../sass/forms/resizable-textarea/grippie.png) no-repeat center 2px #f7f7f7;
   border: 1px solid #cccccc;
   border-top-width: 0;
   cursor: s-resize;
@@ -1948,6 +1948,12 @@ tr.drag-previous {
 .table-drag__tree-child-horizontal,
 .tree-child-horizontal {
   background-position: -11px center;
+}
+
+.layout-center {
+  background: white;
+  box-shadow: 0 0 10px 1px #eee;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */
