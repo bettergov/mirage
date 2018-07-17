@@ -33,7 +33,7 @@ blockquote {
   background: color(body-bg);
   border: 0;
   color: color(text-grey);
-  padding: $indent-amount $indent-amount $indent-amount (2 * $indent-amount);
+  padding: ($indent-amount / 2) ($indent-amount / 2) ($indent-amount / 2) (1.5 * $indent-amount);
   position: relative;
 
   &::before {
@@ -41,11 +41,11 @@ blockquote {
     content: '“';
     font-size: 55px;
     font-style: normal;
-    left: .4em;
+    left: ($indent-amount / 2);
     line-height: 22px;
     position: absolute;
     text-align: center;
-    top: .6em;
+    top: ($indent-amount * 3 / 4);
   }
 }
 
@@ -159,7 +159,7 @@ ul {
 
 figure {
   // Add the correct margin in IE 8.
-  @include margin(1 0);
+  @include margin(.5 0);
   @include typeface(sans);
 
   font-style: italic;
@@ -167,11 +167,13 @@ figure {
 
 figcaption {
   @include margin(.5 0);
-  @include type-layout(s, 1);
+  @include type-layout(s, .8);
   @include typeface(sans);
 
   color: color(text-grey);
+  font-family: $acumin;
   font-style: normal;
+  font-weight: normal;
 }
 
 figcaption > br {

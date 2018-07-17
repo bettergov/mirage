@@ -1,0 +1,25 @@
+// Pullquote
+//
+// Here's a variant of `blockquote` for pullquotes specifically. By applying the
+// class `pullquote` to a `blockquote` element, we'll tap the component style. 
+//
+// Markup: pullquote.twig
+//
+// Style guide: components.pullquote
+
+blockquote.pullquote {
+  @include type-layout(l, 1);
+
+  background: transparent;
+  color: color(text-black);
+  font-weight: bold;
+  padding: (.5 * $indent-amount) 0 0 (1.5 * $indent-amount);
+
+  cite {
+    @include type-layout(m,1);
+
+    color: color(text-grey);
+    font-style: normal;
+    font-weight: normal;
+  }
+}

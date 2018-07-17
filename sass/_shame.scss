@@ -1,5 +1,73 @@
+html {
+  overflow-x: hidden;
+}
+
 .layout-center {
   background: white;
-  box-shadow: 0 0 10px 1px #eee;
-  overflow: hidden;
+  position: relative;
+  max-width: 1000px;
+}
+
+.layout-center:before {
+  box-shadow: -15px 0 15px -15px inset color(grey-light);
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.layout-center:after {
+  box-shadow: 15px 0 15px -15px inset color(grey-light);
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  right: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+@mixin fit-outer() {
+  margin-right: -20px;
+  margin-left: -20px;
+  max-width: calc(100% + 40px);
+}
+
+@mixin fit-inner() {
+  margin-right: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.fit-outer--mobile {
+  @include fit-outer;
+
+  @media (min-width: 777px) {
+    @include fit-inner;
+  }
+}
+
+.align-right {
+  @include margin(1 auto);
+  max-width: 350px;
+
+  @media (min-width: 600px) {
+    @include margin(0 0 .5 .5);
+
+    float: right;
+  }
+}
+
+.align-left {
+  @include margin(1 auto);
+  max-width: 350px;
+
+  @media (min-width: 600px) {
+    @include margin(0 .5 .5 0);
+
+    float: left;
+  }
 }

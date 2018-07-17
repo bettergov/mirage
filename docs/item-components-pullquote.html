@@ -65,22 +65,22 @@
 <article>
 
   
-          <div id="kssref-base-grouping-p" class="kss-section kss-section--depth-3 is-fullscreen">
+          <div id="kssref-components-pullquote" class="kss-section kss-section--depth-2 is-fullscreen">
       <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-base-grouping-p">
+                <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-components-pullquote">
             <span class="kss-title__ref">
-              2.3.1
+              4.14
               <span class="kss-title__permalink-hash">
-                base.grouping.p
+                components.pullquote
               </span>
             </span>
-            Body copy
+            Pullquote
           </a>
-        </h3>
+        </h2>
 
                   <p class="kss-toolbar">
-                        <a href="#kssref-base-grouping-p" data-kss-guides="true">
+                        <a href="#kssref-components-pullquote" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -101,7 +101,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-base-grouping-p" data-kss-markup="true">
+            <a href="#kssref-components-pullquote" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -111,9 +111,8 @@
           </p>
         
                   <div class="kss-description">
-            <p>The default <code>font-size</code> and <code>line-height</code> properties are applied to the
-<code>&lt;body&gt;</code> element and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive
-a top and bottom margin.</p>
+            <p>Here&#39;s a variant of <code>blockquote</code> for pullquotes specifically. By applying the
+class <code>pullquote</code> to a <code>blockquote</code> element, we&#39;ll tap the component style.</p>
 
           </div>
         
@@ -126,44 +125,38 @@ a top and bottom margin.</p>
 
           
           <div class="kss-modifier__example">
-            <p class="">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id
-dolor id nibh ultricies vehicula.</p>
+            <blockquote class="pullquote">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+  erat a ante.</p>
+</blockquote>
 
-<p class="">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis,
-est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
-<p class="">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit
-non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi
-erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
+<blockquote class="pullquote">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+  erat a ante.</p>
+  <cite>J. Smith</cite>
+</blockquote>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
                   </div>
                   <details class="kss-markup kss-style">
             <summary>
-                              Markup: <code>base/grouping/grouping-p.twig</code>
+                              Markup: <code>components/pullquote/pullquote.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;{{modifier_class}}&quot;&gt;Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id
-dolor id nibh ultricies vehicula.&lt;/p&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;blockquote class=&quot;pullquote&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+  erat a ante.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p class=&quot;{{modifier_class}}&quot;&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis,
-est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-elit. Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
-
-&lt;p class=&quot;{{modifier_class}}&quot;&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit
-non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi
-erat porttitor ligula, eget lacinia odio sem nec elit.&lt;/p&gt;
-</code></pre>
+&lt;blockquote class=&quot;pullquote&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+  erat a ante.&lt;/p&gt;
+  &lt;cite&gt;J. Smith&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
           </details>
               
               <div class="kss-source kss-style">
-          Source: <code>base/grouping/_grouping.scss</code>, line 202
+          Source: <code>components/pullquote/_pullquote.scss</code>, line 1
         </div>
           </div>
   </article>

@@ -8,6 +8,7 @@
 
 .inline-links,
 %inline-links {
+  @include margin(.5 0);
   padding: 0;
 
   &__item {

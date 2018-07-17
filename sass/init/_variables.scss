@@ -37,16 +37,16 @@ $support-for: (
 $base-font-size:    16px;
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height:  26px; // 1.625rem
+$base-line-height:  24px; // 1.5rem
 
 // The font sizes in our type hierarchy as tee shirt sizes.
 $font-size: (
-  xxl:              48px,             //    3rem
-  xl:               36px,             // 2.25rem
-  l:                24px,             //  1.5rem
-  m:                $base-font-size,  //    1rem
-  s:                14px,             // .875rem
-  xs:               12px              //  .75rem
+  xxl:              48px,             //     3rem
+  xl:               36px,             //  2.25rem
+  l:                24px,             //   1.5rem
+  m:                18px,             // 1.125rem
+  s:                14px,             //  .875rem
+  xs:               12px              //   .75rem
 );
 
 // Typey allows you to alter font weights site-wide with this map.
@@ -102,9 +102,6 @@ $typefaces: (
   compact: (
     font-family: $acumin-condensed,
     weight: bold,
-    // case: uppercase,
-    // We could also specify the following property:
-    // letter-spacing: .5px,
   ),
 );
 
