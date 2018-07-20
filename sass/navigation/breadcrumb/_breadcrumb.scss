@@ -11,9 +11,8 @@
 
 .breadcrumb,
 %breadcrumb {
-  @media print {
-    display: none;
-  }
+  font-weight: bold;
+  text-transform: uppercase;
 
   &__title {
     @extend %visually-hidden;
@@ -29,5 +28,11 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  @include typeface(sans);
+  @include type-layout(m,1);
+  
+  @media print {
+    display: none;
   }
 }

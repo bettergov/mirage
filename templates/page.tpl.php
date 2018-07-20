@@ -8,11 +8,21 @@
  */
 ?>
 
-<?php include 'parts/header.inc.php';?>
+<?php include 'parts/header.inc';?>
 
-<div class="layout-center">
+<div class="page-content">
 
-  <div class="layout-3col layout-swap">
+  <div class="inner-content layout-3col layout-swap">
+
+    <?php print render($title_suffix);?>
+    <?php print $messages;?>
+    <?php print render($tabs);?>
+    <?php print render($page['help']);?>
+    <?php if ($action_links): ?>
+      <ul class="action-links"><?php print render($action_links);?></ul>
+    <?php endif;?>
+
+    <?php print render($page['top']);?>
 
     <?php
 // Render the sidebars to see if there's anything in them.
@@ -34,9 +44,9 @@ elseif ($sidebar_first):
 endif;
 ?>
 
-    <?php include 'parts/content.inc.php';?>
+    <?php include 'parts/content.inc';?>
 
-    <?php //include 'parts/main-menu.inc.php';?>
+    <?php //include 'parts/main-menu.inc';?>
 
     <?php if ($sidebar_first): ?>
       <aside class="<?php print $sidebar_first_class;?>" role="complementary">

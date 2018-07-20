@@ -10,22 +10,18 @@
 
 .header,
 %header {
-  @extend %clearfix;
-
-  // Theme styles
-  @include padding(.25 1);
+  align-items: center;
 
   background: color(bga-blue);
+  box-shadow: 0 4px 4px rgba(0,0,0,.06);
   color: color(white);
   display: flex;
-  align-items: center;
-  box-shadow: 0 4px 4px rgba(0,0,0,.06);
 
 
   // Wrapping link for logo.
   &__logo {
-    @include margin( 0 .5 0 0 );
     padding: 0;
+    @include margin( 0 .5 0 0 );
 
     @include rtl() {
       float: right;
@@ -35,20 +31,20 @@
 
   // Logo image.
   &__logo-image {
-    vertical-align: bottom;
     filter: grayscale(1) brightness(10);
     height: 36px;
+    vertical-align: bottom;
   }
 
   // Wrapper for website name and slogan.
   &__name-and-slogan {
-    @include padding( .2 0 .1 .5 );
-    @include type-layout(m,1);
-    @include typeface(compact);
 
     border-left: 2px solid white;
     display: none;
     line-height: 1;
+    @include padding( .2 0 .1 .5 );
+    @include type-layout(m,1);
+    @include typeface(compact);
 
     @media (min-width: 450px) {
       display: block;
@@ -98,4 +94,15 @@
     // Clear the logo.
     clear: both;
   }
+  @extend %clearfix;
+
+  // Theme styles
+  @include padding(.25 1);
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }

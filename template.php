@@ -109,16 +109,28 @@ $variables['theme_hook_suggestions'], array('block__no_wrapper')
  * @param string $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function mirage_preprocess_node(&$variables, $hook) {
-$variables['sample_variable'] = t('Lorem ipsum.');
+// /* -- Delete this line if you want to use this function
+function mirage_preprocess_node(&$variables, $hook)
+{
+    // $variables['sample_variable'] = t('Lorem ipsum.');
 
-// Optionally, run node-type-specific preprocess functions, like
-// mirage_preprocess_node_page() or mirage_preprocess_node_story().
-$function = __FUNCTION__ . '_' . $variables['node']->type;
-if (function_exists($function)) {
-$function($variables, $hook);
+    // Optionally, run node-type-specific preprocess functions, like
+    // mirage_preprocess_node_page() or mirage_preprocess_node_story().
+    $function = __FUNCTION__ . '_' . $variables['node']->type;
+    if (function_exists($function)) {
+        $function($variables, $hook);
+    }
 }
+
+function mirage_preprocess_node_article(&$vars, $hook)
+{
+    // Set article url to custom url
+    if (!empty($vars['field_custom_url'])) {
+        $vars['node_url'] = $vars['field_custom_url'][0]['safe_value'];
+    }
+
+    // Add Pym script
+    drupal_add_js('https://pym.nprapps.org/npr-pym-loader.v2.min.js');
 }
 // */
 

@@ -9,14 +9,8 @@
 ?>
 <article class="<?php print $classes;?> clearfix node-<?php print $node->nid;?>"<?php print $attributes;?>>
 
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || $preview || !$page && $title): ?>
+  <?php if ($display_submitted || $unpublished || $preview): ?>
     <header>
-      <?php print render($title_prefix);?>
-      <?php if (!$page && $title): ?>
-        <h2<?php print $title_attributes;?>><a href="<?php print $node_url;?>"><?php print $title;?></a></h2>
-      <?php endif;?>
-      <?php print render($title_suffix);?>
-
       <?php if ($display_submitted): ?>
         <p class="submitted">
           <?php print $user_picture;?>
@@ -32,19 +26,24 @@
     </header>
   <?php endif;?>
 
-  <?php if ($page && $title): ?>
-  <h1 class="field-title"><?php print $title;?></h1>
-  <?php endif;?>
-
   <?php
 // We hide the comments and links now so that we can render them later.
 hide($content['comments']);
 hide($content['links']);
-print render($content);
 ?>
 
-  <?php print render($content['links']);?>
+<?php if ($title_prefix || $title_suffix): ?>
+<?php print render($title_prefix);?>
+<?php if (!$page && $title): ?>
+  <h2 class="field-title" <?php print $title_attributes;?>><a href="<?php print $node_url;?>"><?php print $title;?></a></h2>
+<?php endif;?>
+<?php print render($title_suffix);?>
+<?php endif;?>
 
-  <?php print render($content['comments']);?>
+<?php
+print render($content);
+// print render($content['links']);
+// print render($content['comments']);
+?>
 
 </article>

@@ -8,7 +8,7 @@
  */
 ?>
 
-<header class="header" role="banner">
+<header class="header header--fixed" role="banner">
 
   <?php if ($logo): ?>
     <a href="<?php print $front_page;?>" title="<?php print t('Home');?>" rel="home" class="header__logo"><img src="<?php print $logo;?>" alt="<?php print t('Home');?>" class="header__logo-image" /></a>
