@@ -22,7 +22,7 @@ html {
 
 .layout-center::before {
   box-shadow: -15px 0 15px -15px inset color(grey-light);
-  content: " ";
+  content: ' ';
   display: inline-block;
   height: 100%;
   left: -15px;
@@ -33,7 +33,7 @@ html {
 
 .layout-center::after {
   box-shadow: 15px 0 15px -15px inset color(grey-light);
-  content: " ";
+  content: ' ';
   display: inline-block;
   height: 100%;
   position: absolute;
@@ -63,11 +63,10 @@ html {
 }
 
 .align-right {
-  max-width: 350px;
   @include margin(1 auto);
+  max-width: 350px;
 
   @media (min-width: 600px) {
-
     float: right;
     @include margin(0 0 .5 .5);
   }
@@ -78,7 +77,6 @@ html {
   @include margin(1 auto);
 
   @media (min-width: 600px) {
-
     float: left;
     @include margin(0 .5 .5 0);
   }
@@ -99,7 +97,11 @@ html {
   padding-right: 20px;
 }
 
-.layout-3col__full, .layout-3col__left-content, .layout-3col__right-content, .layout-3col__left-sidebar, .layout-3col__right-sidebar {
+.layout-3col__full,
+.layout-3col__left-content,
+.layout-3col__right-content,
+.layout-3col__left-sidebar,
+.layout-3col__right-sidebar {
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
@@ -116,7 +118,7 @@ html {
 
     &::after {
       color: color(grey-light);
-      content: "/";
+      content: '/';
       font-weight: normal;
       padding: 0 .5em;
     }
@@ -130,7 +132,7 @@ html {
 figcaption::before {
   background: color(bga-blue);
   // color: color(bga-blue);
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   margin-right: 1em;
@@ -169,6 +171,7 @@ figcaption::before {
   }
 
   > .node-teaser__text {
+    @include margin(0 0 0 1);
 
     > .field-article-author,
     > .field-published-date {
@@ -177,7 +180,7 @@ figcaption::before {
 
       &::after {
         color: color(grey-light);
-        content: "/";
+        content: '/';
         font-weight: normal;
         padding: 0 .5em;
       }
@@ -186,7 +189,6 @@ figcaption::before {
         display: none;
       }
     }
-    @include margin(0 0 0 1);
   }
 
   .field-title {

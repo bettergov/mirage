@@ -15,16 +15,16 @@
 // 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
 //    controls in Android 4.
 // 2. Correct the inability to style clickable types in iOS and Safari.
-.button,
-%button,
-button,
-// 1
-html [type='button'],
-[type='reset'],
-[type='submit'] {
-  -moz-appearance: button;
-  -webkit-appearance: button; // 2
-}
+// .button,
+// %button,
+// button,
+// // 1
+// html [type='button'],
+// [type='reset'],
+// [type='submit'] {
+//      -moz-appearance: button;
+//   -webkit-appearance: button; // 2
+// }
 
 .button,
 %button,
@@ -32,10 +32,9 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  @extend %button--disabled;
   // Some styles don't apply to <a> links since they are inline elements by default.
   display: inline-block;
-  padding: 2px 6px;
+  padding: 6px 6px 2px;
   // Address Firefox 4+ setting `line-height` on `input` using `!important` in
   // the UA stylesheet. And prevent its "line-height: normal" rule below from
   // breaking the "appearance: button" styling on the input elements.
@@ -43,7 +42,12 @@ button,
   text-decoration: none;
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
-  color: color(button);
+  color: color(white);
+  background-color: desaturate(lighten(color(bga-blue), 20%), 50%);
+  border: 1px solid transparent;
+  border-radius: .25em;
+  transition: background-color .5s;
+  @extend %button--disabled;
 
   // Remove the inner border and padding in Firefox.
   &::-moz-focus-inner {
@@ -61,7 +65,10 @@ button,
   &:active {
     // Override any link underlines and color changes.
     text-decoration: none;
-    color: color(button);
+    background-color: color(bga-blue);
+    // background-image: linear-gradient(-180deg, #f0f3f6 0%, #eee 90%);
+    // border-color: rgba(27,31,35,.35);
+    color: color(white);
   }
 }
 
@@ -78,12 +85,7 @@ button,
 %button--disabled[disabled] {
   // Re-set default cursor for disabled elements.
   cursor: default;
-  color: color(button-disabled);
-
-  &:hover,
-  &:focus,
-  &:active {
-    // Override any link underlines and color changes.
-    color: color(button-disabled);
-  }
+  filter: grayscale(20%);
+  background: rgba(50, 109, 151, .75);
+  color: rgba(255,255,255,.75);
 }

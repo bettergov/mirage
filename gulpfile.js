@@ -77,7 +77,7 @@ options.styleGuide = {
   js: [],
 
   homepage: 'homepage.md',
-  title: 'Zen 7.x-6.x Style Guide'
+  title: 'Mirage: BGA styles'
 };
 
 // Define the paths to the JS files to lint.

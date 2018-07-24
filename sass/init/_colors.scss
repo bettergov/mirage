@@ -13,7 +13,6 @@
 
 // Define the default color scheme's color names.
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
-
 $chroma: add-colors((
   bga-blue:               #003a63,
   bga-yellow:             #fff200,
@@ -23,7 +22,7 @@ $chroma: add-colors((
   grey-dark:              ('black' lighten 40%), // #666
   'grey':                 ('black' lighten 60%), // #999
   grey-light:             ('black' lighten 80%), // #ccc
-  grey-extra-light:       #EAEBEE,
+  grey-extra-light:       #eaebee,
   white:                  #fff,
 
   blue:                   #4580bb,
@@ -98,5 +97,4 @@ $chroma: add-colors('functional', (
 
   watermark:              'grey-extra-light',
 ));
-
 $chroma-active-scheme: 'functional';
